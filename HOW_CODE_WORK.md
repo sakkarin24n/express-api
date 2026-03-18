@@ -1,17 +1,17 @@
 # HOW_CODE_WORK.md - คู่มือการทำงานของโค้ดแบบละเอียด
 
 ## สารบัญ
-1. [ภาพรวมการทำงาน](#ภาพรวมการทำงาน)
-2. [Flow การทำงาน](#flow-การทำงาน)
+1. [ภาพรวมการทำงาน](#overview)
+2. [Flow การทำงาน](#flow)
 3. [Step by Step](#step-by-step)
-4. [รายละเอียดแต่ละไฟล์](#รายละเอียดแต่ละไฟล์)
-5. [Middleware คืออะไร](#middleware-คืออะไร)
-6. [Auto Route Loader ทำงานอย่างไร](#auto-route-loader-ทำงานอย่างไร)
-7. [Prisma ทำงานอย่างไร](#prisma-ทำงานอย่างไร)
+4. [รายละเอียดแต่ละไฟล์](#file-details)
+5. [Middleware คืออะไร](#middleware)
+6. [Auto Route Loader ทำงานอย่างไร](#auto-route-loader)
+7. [Prisma ทำงานอย่างไร](#prisma)
 
 ---
 
-## ภาพรวมการทำงาน
+## ภาพรวมการทำงาน {#overview}
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -48,7 +48,7 @@
 
 ---
 
-## Flow การทำงาน
+## Flow การทำงาน {#flow}
 
 เมื่อ client ส่ง request เข้ามา เช่น `GET /api/user` จะเกิดขั้นตอนดังนี้:
 
@@ -186,7 +186,7 @@ export default logger;
 
 ---
 
-## รายละเอียดแต่ละไฟล์
+## รายละเอียดแต่ละไฟล์ {#file-details}
 
 ### 1. src/server.js - จุดเริ่มต้นทั้งหมด
 
@@ -587,7 +587,7 @@ export const deleteUser = async (req, res, next) => {
 
 ---
 
-## Middleware คืออะไร
+## Middleware คืออะไร {#middleware}
 
 ### แนวคิดของ Middleware
 
@@ -647,7 +647,7 @@ app.use('/admin', auth);
 
 ---
 
-## Auto Route Loader ทำงานอย่างไร
+## Auto Route Loader ทำงานอย่างไร {#auto-route-loader}
 
 ### ปัญหาก่อนใช้ Auto Loader
 
@@ -719,7 +719,7 @@ fs.readdirSync(routesPath)
 
 ---
 
-## Prisma ทำงานอย่างไร
+## Prisma ทำงานอย่างไร {#prisma}
 
 ### 1. Schema → Database
 
